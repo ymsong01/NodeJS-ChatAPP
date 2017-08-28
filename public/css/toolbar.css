@@ -1,0 +1,53 @@
+#toolbar {
+    margin: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    vertical-align: middle;
+}
+  #toolbar .left {
+    display: inline-block;
+  }
+    #toolbar .left #back {
+      margin-left: 46px;
+      width: 140px;
+      font-size: 14px;
+      color: #fff;
+      text-decoration: underline;
+    }
+      #toolbar .left #back a{
+        margin-left: 4px; 
+      }
+  #toolbar .right {
+    display: inline-block;
+  }
+    #toolbar .right .welcome {
+        color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+    }
+      #toolbar .welcome .msg {
+          font-size: 12px;
+          margin-right: 8px;
+      }
+
+    #toolbar .buttons {
+        display: inline-block;
+        margin-right: 16px;
+        vertical-align: middle;
+    }
+      #toolbar .buttons button {
+          display: inline-block;
+          margin-right: 0;
+          width: 100px;
+      }
+      #toolbar .right .buttons #register {
+          background-color: #73628A;
+      }
+      #toolbar .right .buttons #login {
+          background-color: #313D5A;
+      }
+      #toolbar .right .buttons #logout {
+          background-color: #777777;
+      }

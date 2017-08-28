@@ -1,0 +1,6 @@
+mixin flash(msg, type)
+    case type
+        when "error"
+            div.flash.error 
+                img(src="/images/error.png" title="Error")
+                h4= msg

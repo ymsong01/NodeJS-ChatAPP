@@ -1,0 +1,19 @@
+include ./../includes/header.jade
+include ./../includes/flash.jade
+
+#register-container
+    h2.title Welcome to Chat Box!
+    h4.msg Let's register to get started...
+    form(action="/auth/register" method="post").register
+        //+flash("This username is already used", "error")
+        div
+            label(for="username" autofocus="autofocus") username
+            input(type="text" name="username")
+        div
+            label(for="password") password
+            input(type="password" name="password")
+        div
+            label(for="password") confirm password
+            input(type="password" name="confirmPassword")
+        button(type="submit").submit Register
+        a(href="/").button.cancel Cancel

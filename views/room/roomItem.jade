@@ -1,0 +1,12 @@
+mixin roomItem(room)
+  div.sep
+  div.item
+    div.info
+        h3.name= room.name
+        div.meta
+            h5.member-count #[em #{room.members.length} members]
+            if room.lastActivity 
+              h5.last-activity Last update: #{room.lastActivity}
+    div.action
+        a.button(id="preview" href="/rooms/"+room._id+"?mode=preview") Preview
+        a.button(id="join" href="/rooms/"+room._id+"?mode=join") Join

@@ -1,0 +1,66 @@
+.lobby.container {
+  background-color: #F1F2EE;
+  width: 800px;
+  margin: 32px auto;
+}
+.lobby.header {
+  width: 100%;
+  line-height: 32px;
+  background-color: #183642;
+}
+  .lobby.header .title {
+    display: block;
+    text-align: center;
+    vertical-align: center;
+    color: #aaa;
+    font-size: 14px;
+  }
+  .lobby .sep {
+    height: 2px;
+    background-color: #0B4F6C;
+  }
+  .lobby .item {
+    display: table;
+    width: 100%;
+    height: 60px;
+  }
+  .lobby .action #preview {
+          background-color: #313D5A;
+        }
+        .lobby .action #join {
+          background-color: #73628A;
+        }
+
+  .lobby .info {
+      display: table-cell;
+      padding-left: 20px;
+      padding-top: 4px;
+  }
+
+.lobby .name {
+}
+
+.lobby .meta {
+    color: #BFB7B6;
+}
+
+.lobby .meta .member-count {
+  font-size: 12px;
+}
+
+.lobby .meta .last-activity {
+    font-size: 12px;
+}
+      
+.lobby .action {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      width: 200px;
+}
+        .lobby .action #preview {
+          background-color: #313D5A;
+        }
+        .lobby .action #join {
+          background-color: #73628A;
+        }

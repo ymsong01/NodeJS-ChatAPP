@@ -1,0 +1,18 @@
+mixin toolbar(user)
+  #toolbar
+    div.left
+      if(path !== "/rooms" && path !== "/")
+        div#back.buttons
+          i(class="fa fa-arrow-left")
+          a(href="/") Back to Lobby
+    div.right
+      if user 
+        div.welcome
+          h4.msg Hello, #[span.username= user.username + ' !']
+      div.buttons
+        if !user
+            button#register #[i(class="fa fa-pencil-square-o")] #[a(href="/auth/register") Register] 
+            button#login #[i(class="fa fa-sign-in")] #[a(href="/auth/login") Login] 
+        else    
+            button#logout #[a(href="/auth/logout") Logout] 
+      

@@ -1,0 +1,59 @@
+#register-container {
+    width: 400px;
+    height: auto;
+    background-color: #73628A;
+    padding: 16px 0px 0px 0px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 20%;
+    text-align: center;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.5);
+}
+    #register-container .title {
+        font-size: 22px;
+        color: white;
+    }
+    #register-container .msg {
+        margin-top: 4px;
+        font-size: 13px;
+        color: #313D5A;
+    }
+    #register-container form {
+        padding: 8px 0px 8px 0px;
+        margin-top: 16px;
+        width: 100%;
+        background-color: #CBC5EA;
+    }
+        #register-container form label {
+            font-size: 13px;
+            color: #73628A;
+            margin-right: 12px;
+            text-align: right;
+            display: inline-block;
+            width: 120px;
+        }
+        #register-container form input {
+            outline: none;
+            border: none;
+            border-bottom: 1px dotted #73628A;
+            color: #313D5A;
+            font-size: 12px;
+            background-color: transparent;
+            width: 220px;
+            font-family: 'Merriweather', serif;
+        }
+        #register-container form div+div {
+            margin-top: 4px;
+        }
+        #register-container form button, #register-container form a {
+            width: 120px;
+        }
+        #register-container form a {
+            vertical-align: middle;
+            margin-top: 0px; 
+        }
+        #register-container form .submit {
+            background-color: #313D5A;
+            margin-top: 24px;
+        }

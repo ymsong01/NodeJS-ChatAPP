@@ -1,0 +1,34 @@
+include ./includes/header.jade
+include ./room/roomItem.jade
+include ./includes/toolbar.jade
+
+script(type="text/javascript"). // make template params available to js files 
+    var user = !{JSON.stringify(user)}
+script(src="/js/room.js")
+script(src="/socket.io/socket.io.js")
+
++toolbar(user)
+div.room.container
+    div.chats
+        div.chat
+            div.meta
+                h4.author John Schewenger
+                h4.time 12:50am Apr 5, 2017
+            div.content
+                |New Chat room
+    div.room.compose
+        div.room.compose.form
+            if user
+                if mode === "preview"
+                    div.warning
+                        i.fa.fa-exclamation
+                        span.warning.msg This is only a preview. You must join the room to post.
+                else 
+                    h4.title Say Something...
+                    form(action="/rooms/" + room._id + "/chats" method="POST")
+                        textarea(autofocus="true" id="text" name="text" required="true").chat-text
+                        button(id="post" type="submit").post Post
+            else 
+                div.warning
+                    i.fa.fa-lock
+                    span.warning.msg You must register or login to post a message here

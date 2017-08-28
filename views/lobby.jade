@@ -1,0 +1,17 @@
+include ./includes/header.jade
+include ./room/roomItem.jade
+include ./includes/toolbar.jade
+script(src="/js/lobby.js")
+script(src="/socket.io/socket.io.js")
+
+#container
+  +toolbar(user)
+  div.lobby.container
+    div.lobby.header 
+      h4.title All Available Rooms
+    each room in rooms
+      +roomItem(room)
+  
+script. 
+  connectSocket(); 
+      

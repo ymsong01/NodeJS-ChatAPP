@@ -1,0 +1,16 @@
+include ./../includes/header.jade
+include ./../includes/flash.jade
+
+#login-container
+    h2.title Welcome to Chat Box!
+    h4.msg Please login to continue...
+    form(action="/auth/login" method="post")
+        //+flash("This username is already used", "error")
+        div
+            label(for="username" autofocus="autofocus") username
+            input(type="text" name="username")
+        div
+            label(for="password") password
+            input(type="password" name="password")
+        button(type="submit").submit Login
+        a(href="/").button.cancel Cancel
